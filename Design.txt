@@ -1,0 +1,65 @@
+Hi! Since I've opened up the source for Digits, I wanted to take a second to
+talk about some of the design decisions I made while writing it.
+
+If you didn't know, Digits started out as a simple project for me to work on
+while I was hanging out at hacker spaces. It started pretty modestly. The
+first version only sported one LFO, only had the delay effect, no filters,
+and the envelopes were trapezoidal. It has come a long way!
+
+One thing I was particularly happy with was how the phase distortion algorithm
+came out. While some examples I've seen use different routines for different
+waveshapes, Digits uses a consistent formula and just changes settings to
+produce all of its waveforms. For example, saw means you run the shaper
+once per cycle. Square means you run the shaper twice per cycle. Skew means
+that you alter position of the node where the knee in the phase distortion is.
+The pulse-width modulation is faked in by applying a second shaper to the
+entire generator (so, a shaper within a shaper). This is also why the
+pulse-width modulation causes the waveform to brighten as the pulse narrows.
+
+The design of Digits is not without some regrets: I went with a control rate
+for the main audio loop instead of making it 100% sample-accurate. This is
+because that's how I always did synthesizers, and this is how a lot of older
+synths operated. It makes for a messy loop and causes a tiny amount of jitter.
+A much better way of doing it would be to render the number of samples between
+MIDI events precisely.
+
+A big problem in the user interface is the Shaper Lock in the filter section.
+It provides a lot of flexibility, but at the cost of being unorthodox and
+confusing to many users.
+
+My final regret that I want to talk about is how much of a mess the UI code
+is! It really grew a lot. If I did it again, I'd leverage classes more to
+clean it up. This ended up looking more the way it'd look if you just wrote
+it in flat C. Oops.
+
+Optimization: While the oscillators look like they are doing a lot of heavy
+lifting, they are actually fairly fast. However, the LFOs and especially the
+envelopes are slow. I would suggest making a table-driven envelope to replace
+it. Be aware though that the attack is an inverse curve from the decay shape.
+
+You might also notice that the oscillator uses an uninterpolated lookup. I
+investigated on a few devices, seeing whether the increased table size might
+cause a CPU cache miss, or whether it would drastically hurt the sound
+quality. It was very fast without interpolation and did not appear to hurt
+the sound quality too much, so that is what I went for. My secret shame.
+
+Lastly, there are many, many areas where you could improve the speed with
+vector processing. However, this particular version of the Digits engine only
+uses basic C++ code and no inline assembly or vector intrinsics.
+
+As far as sound quality goes, it can alias a little bit at 44 or 48khz. I
+started on an oversampling routine but never fit it into the code (this is
+all done as an after-work hobby after all). Though aliasing is combated a bit
+by toning down the shaper at higher pitches, a little oversampling might
+go a long way.
+
+Anyway, that's about it! Happy hacking; be sure to read the License.txt!
+(Digits is licensed under GPL)
+
+Cheers,
+Louis "Extent of the Jam" Gorenfeld
+louis.gorenfeld@gmail.com
+
+
+
+

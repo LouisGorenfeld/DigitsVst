@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3d0f6ae8-fa23-4685-9a80-cfccffeb77e4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "3d0f6ae8-fa23-4685-9a80-cfccffeb77e4" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3d0f6ae8-fa23-4685-9a80-cfccffeb77e4" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "389F805C-D228-474D-882B-A7E8333636C1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3d0f6ae8-fa23-4685-9a80-cfccffeb77e4" : "DigitsVst\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PDVST",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "trunk\/Mac\/PDVST.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/www.extentofthejam.com\/DigitsVst",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3d0f6ae8-fa23-4685-9a80-cfccffeb77e4"
+    }
+  ]
+}

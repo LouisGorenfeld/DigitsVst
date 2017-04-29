@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "fda82bb9-77cd-40e1-9680-d2fdca61505c",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "fda82bb9-77cd-40e1-9680-d2fdca61505c" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "fda82bb9-77cd-40e1-9680-d2fdca61505c" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "031BA8E8-F7BC-4D4E-90F7-0551FC4BDB0C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "fda82bb9-77cd-40e1-9680-d2fdca61505c" : "eojsource\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Main",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "trunk\/mac\/Main.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/www.extentofthejam.com\/eojsource",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "fda82bb9-77cd-40e1-9680-d2fdca61505c"
+    }
+  ]
+}

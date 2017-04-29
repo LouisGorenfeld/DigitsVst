@@ -1,0 +1,56 @@
+#define APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+CosNoiseRockerV.png      PNG  DISCARDABLE     "../Graphics/digits/CosNoiseRockerV.png"
+CosSinRockerV.png          PNG  DISCARDABLE     "../Graphics/digits/CosSinRockerV.png"
+Dial_LCD.png PNG  DISCARDABLE     "../Graphics/digits/Dial_LCD.png"
+DialHandle_LCD.png PNG  DISCARDABLE     "../Graphics/digits/DialHandle_LCD.png"
+DigitsBG.png PNG  DISCARDABLE     "../Graphics/digits/DigitsBG.png"
+HSliderBG.png PNG  DISCARDABLE     "../Graphics/digits/HSliderBG.png"
+HSliderNub.png PNG  DISCARDABLE     "../Graphics/digits/HSliderNub.png"
+Logo.png PNG  DISCARDABLE     "../Graphics/digits/Logo.png"
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+1 VERSIONINFO
+ FILEVERSION    1,0,0,0
+ PRODUCTVERSION 2,1,0,0
+ FILEFLAGSMASK 0x0L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004e4"
+        BEGIN
+			VALUE "CompanyName", "Extent of the Jam\0"
+			VALUE "FileDescription", "Digits VST\0"
+			VALUE "FileVersion", "2.1.0"
+			VALUE "InternalName", "Digits VST"
+			VALUE "LegalCopyright", "Extent of the Jam\0"
+			VALUE "OriginalFilename", "Digits"
+			VALUE "ProductName", "Digits"
+			VALUE "ProductVersion", "2.1.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1252
+    END
+END
+
+#endif    // !_MAC
