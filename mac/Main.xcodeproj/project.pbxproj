@@ -29,7 +29,6 @@
 		BF8248D01DC04D980073E18C /* PhaseDist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF8248AB1DC04D980073E18C /* PhaseDist.cpp */; };
 		BF8248D11DC04D980073E18C /* ResoGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF8248AD1DC04D980073E18C /* ResoGen.cpp */; };
 		BF8248D21DC04D980073E18C /* VstCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF8248AF1DC04D980073E18C /* VstCore.cpp */; };
-		BF8248E11DC04FBB0073E18C /* Digits-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF8248DE1DC04FBB0073E18C /* Digits-Info.plist */; };
 		BF8249021DC050330073E18C /* CosNoiseRockerV.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8248E71DC050170073E18C /* CosNoiseRockerV.png */; };
 		BF8249031DC050330073E18C /* CosSinRockerV.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8248E81DC050170073E18C /* CosSinRockerV.png */; };
 		BF8249041DC050330073E18C /* Dial_LCD.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8248E91DC050170073E18C /* Dial_LCD.png */; };
@@ -117,23 +116,6 @@
 		BF8248ED1DC050170073E18C /* HSliderBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HSliderBG.png; sourceTree = "<group>"; };
 		BF8248EE1DC050170073E18C /* HSliderNub.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HSliderNub.png; sourceTree = "<group>"; };
 		BF8248EF1DC050170073E18C /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
-		BF8248F11DC050170073E18C /* BassDrum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BassDrum.png; sourceTree = "<group>"; };
-		BF8248F21DC050170073E18C /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
-		BF8248F31DC050170073E18C /* ClSnap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ClSnap.png; sourceTree = "<group>"; };
-		BF8248F41DC050170073E18C /* Hats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hats.png; sourceTree = "<group>"; };
-		BF8248F51DC050170073E18C /* Knob40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Knob40.png; sourceTree = "<group>"; };
-		BF8248F61DC050170073E18C /* Knob40Handle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Knob40Handle.png; sourceTree = "<group>"; };
-		BF8248F71DC050170073E18C /* Knob80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Knob80.png; sourceTree = "<group>"; };
-		BF8248F81DC050170073E18C /* Pad40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pad40.png; sourceTree = "<group>"; };
-		BF8248F91DC050170073E18C /* PianoKey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PianoKey.png; sourceTree = "<group>"; };
-		BF8248FA1DC050170073E18C /* Placemat1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Placemat1.png; sourceTree = "<group>"; };
-		BF8248FB1DC050170073E18C /* Placemat2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Placemat2.png; sourceTree = "<group>"; };
-		BF8248FC1DC050170073E18C /* PlacematBDSN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlacematBDSN.png; sourceTree = "<group>"; };
-		BF8248FD1DC050170073E18C /* PlacematCP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlacematCP.png; sourceTree = "<group>"; };
-		BF8248FE1DC050170073E18C /* PlacematPads.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlacematPads.png; sourceTree = "<group>"; };
-		BF8248FF1DC050170073E18C /* SlamLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SlamLogo.png; sourceTree = "<group>"; };
-		BF8249001DC050170073E18C /* SnareDrum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SnareDrum.png; sourceTree = "<group>"; };
-		BF8249011DC050170073E18C /* Toms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Toms.png; sourceTree = "<group>"; };
 		BF8D1651160C075D002BAEBC /* DigitsBench */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DigitsBench; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF934FB71C6066F3008125AC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = ../../../../System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		BFDFB4F314A6139100AB86BE /* aeffeditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aeffeditor.h; sourceTree = "<group>"; };
@@ -295,7 +277,6 @@
 			isa = PBXGroup;
 			children = (
 				BF8248E51DC050170073E18C /* digits */,
-				BF8248F01DC050170073E18C /* slam */,
 			);
 			name = graphics;
 			path = ../graphics;
@@ -315,30 +296,6 @@
 				BF8248EF1DC050170073E18C /* Logo.png */,
 			);
 			path = digits;
-			sourceTree = "<group>";
-		};
-		BF8248F01DC050170073E18C /* slam */ = {
-			isa = PBXGroup;
-			children = (
-				BF8248F11DC050170073E18C /* BassDrum.png */,
-				BF8248F21DC050170073E18C /* bg.png */,
-				BF8248F31DC050170073E18C /* ClSnap.png */,
-				BF8248F41DC050170073E18C /* Hats.png */,
-				BF8248F51DC050170073E18C /* Knob40.png */,
-				BF8248F61DC050170073E18C /* Knob40Handle.png */,
-				BF8248F71DC050170073E18C /* Knob80.png */,
-				BF8248F81DC050170073E18C /* Pad40.png */,
-				BF8248F91DC050170073E18C /* PianoKey.png */,
-				BF8248FA1DC050170073E18C /* Placemat1.png */,
-				BF8248FB1DC050170073E18C /* Placemat2.png */,
-				BF8248FC1DC050170073E18C /* PlacematBDSN.png */,
-				BF8248FD1DC050170073E18C /* PlacematCP.png */,
-				BF8248FE1DC050170073E18C /* PlacematPads.png */,
-				BF8248FF1DC050170073E18C /* SlamLogo.png */,
-				BF8249001DC050170073E18C /* SnareDrum.png */,
-				BF8249011DC050170073E18C /* Toms.png */,
-			);
-			path = slam;
 			sourceTree = "<group>";
 		};
 		BFDFB4D714A6134600AB86BE /* VSTSDK */ = {
@@ -428,6 +385,7 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 1120;
 			};
 			buildConfigurationList = 1DEB911E08733D790010E9CD /* Build configuration list for PBXProject "Main" */;
 			compatibilityVersion = "Xcode 3.1";
@@ -455,7 +413,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF8249071DC050330073E18C /* DigitsBG.xcf in Resources */,
-				BF8248E11DC04FBB0073E18C /* Digits-Info.plist in Resources */,
 				BF8249051DC050330073E18C /* DialHandle_LCD.png in Resources */,
 				BF82490A1DC050330073E18C /* Logo.png in Resources */,
 				BF8249061DC050330073E18C /* DigitsBG.png in Resources */,
@@ -510,10 +467,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GENERATE_PKGINFO_FILE = YES;
@@ -529,7 +485,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
@@ -545,14 +501,39 @@
 		1DEB911F08733D790010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DIGITS_PRO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = ../sdks/vstsdk2.4;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -561,7 +542,28 @@
 		1DEB912008733D790010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_AUTO_VECTORIZATION = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"NDEBUG=1",
@@ -569,13 +571,16 @@
 					NO_EDITORx,
 				);
 				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = ../sdks/vstsdk2.4;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CFLAGS = "";
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
-				PREBINDING = NO;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -585,13 +590,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
-				PREBINDING = NO;
 				PRODUCT_NAME = DigitsBench;
 			};
 			name = Debug;
@@ -600,12 +605,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
-				PREBINDING = NO;
 				PRODUCT_NAME = DigitsBench;
 				ZERO_LINK = NO;
 			};
