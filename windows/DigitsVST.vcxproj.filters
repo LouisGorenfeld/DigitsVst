@@ -1,42 +1,117 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="..\sdks\vstgui\plugin-bindings\aeffguieditor.cpp" />
-    <ClCompile Include="..\sdks\vstgui\vstgui_win32.cpp" />
-    <ClCompile Include="..\sdks\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp" />
-    <ClCompile Include="..\sdks\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp" />
-    <ClCompile Include="..\sdks\vstsdk2.4\public.sdk\source\vst2.x\vstplugmain.cpp" />
-    <ClCompile Include="..\src\components\BufferManager.cpp" />
-    <ClCompile Include="..\src\components\Chorus.cpp" />
-    <ClCompile Include="..\src\components\Contour.cpp" />
-    <ClCompile Include="..\src\components\PatchBankListWin.cpp" />
-    <ClCompile Include="..\src\components\SndBuf.cpp" />
-    <ClCompile Include="..\src\components\Tables.cpp" />
-    <ClCompile Include="..\src\components\Voice.cpp" />
-    <ClCompile Include="..\src\digits\EditorWindow.cpp" />
-    <ClCompile Include="..\src\digits\Patches.cpp" />
-    <ClCompile Include="..\src\digits\PhaseDist.cpp" />
-    <ClCompile Include="..\src\digits\ResoGen.cpp" />
-    <ClCompile Include="..\src\digits\VstCore.cpp" />
+    <ClCompile Include="..\sdks\vstgui\plugin-bindings\aeffguieditor.cpp">
+      <Filter>VST SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sdks\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp">
+      <Filter>VST SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sdks\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp">
+      <Filter>VST SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sdks\vstsdk2.4\public.sdk\source\vst2.x\vstplugmain.cpp">
+      <Filter>VST SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sdks\vstgui\vstgui_win32.cpp">
+      <Filter>VSTGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\components\BufferManager.cpp">
+      <Filter>Digits Synth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\components\Chorus.cpp">
+      <Filter>Digits Synth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\components\Contour.cpp">
+      <Filter>Digits Synth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\digits\EditorWindow.cpp">
+      <Filter>Digits Synth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\components\PatchBankListWin.cpp">
+      <Filter>Digits Synth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\digits\Patches.cpp">
+      <Filter>Digits Synth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\digits\PhaseDist.cpp">
+      <Filter>Digits Synth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\digits\ResoGen.cpp">
+      <Filter>Digits Synth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\components\SndBuf.cpp">
+      <Filter>Digits Synth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\components\Tables.cpp">
+      <Filter>Digits Synth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\components\Voice.cpp">
+      <Filter>Digits Synth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\digits\VstCore.cpp">
+      <Filter>Digits Synth</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\components\BufferManager.h" />
-    <ClInclude Include="..\src\components\Chorus.h" />
-    <ClInclude Include="..\src\components\Contour.h" />
-    <ClInclude Include="..\src\components\FilterBank.h" />
-    <ClInclude Include="..\src\components\LFO.h" />
-    <ClInclude Include="..\src\components\PatchBankList.h" />
-    <ClInclude Include="..\src\components\PatchBankListWin.h" />
-    <ClInclude Include="..\src\components\SndBuf.h" />
-    <ClInclude Include="..\src\components\Tables.h" />
-    <ClInclude Include="..\src\components\Voice.h" />
-    <ClInclude Include="..\src\digits\EditorWindow.h" />
-    <ClInclude Include="..\src\digits\Patches.h" />
-    <ClInclude Include="..\src\digits\PhaseDist.h" />
-    <ClInclude Include="..\src\digits\ResoGen.h" />
-    <ClInclude Include="..\src\digits\VstCore.h" />
+    <ClInclude Include="..\src\components\BufferManager.h">
+      <Filter>Digits Synth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\components\Chorus.h">
+      <Filter>Digits Synth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\components\Contour.h">
+      <Filter>Digits Synth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\digits\EditorWindow.h">
+      <Filter>Digits Synth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\components\FilterBank.h">
+      <Filter>Digits Synth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\components\LFO.h">
+      <Filter>Digits Synth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\components\PatchBankList.h">
+      <Filter>Digits Synth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\components\PatchBankListWin.h">
+      <Filter>Digits Synth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\digits\Patches.h">
+      <Filter>Digits Synth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\digits\PhaseDist.h">
+      <Filter>Digits Synth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\digits\ResoGen.h">
+      <Filter>Digits Synth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\components\SndBuf.h">
+      <Filter>Digits Synth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\components\Tables.h">
+      <Filter>Digits Synth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\components\Voice.h">
+      <Filter>Digits Synth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\digits\VstCore.h">
+      <Filter>Digits Synth</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Digits.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="VST SDK">
+      <UniqueIdentifier>{1f9cfbf4-3f0c-4eb3-b3de-e51657f9b9bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VSTGUI">
+      <UniqueIdentifier>{4f922542-056e-41fe-beb0-a826329d6e3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Digits Synth">
+      <UniqueIdentifier>{441e4b35-e907-45cf-add9-96eae9c12566}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
