@@ -308,11 +308,9 @@ VstCore::VstCore(audioMasterCallback audioMaster) :
     {
         m_curProgram = m_pbList.GetCurPatch();
     }
-    
-	m_keyBits[0] = 0;
-	m_keyBits[1] = 0;
-	m_keyBits[2] = 0;
-	m_keyBits[3] = 0;
+
+    memset(m_noteBits, 0, sizeof(m_noteBits));
+    memset(m_keyBits, 0, sizeof(m_keyBits));
 
     printf("Finishing up...\n");
 	memset(m_dc_out, 0, sizeof(float)*2);
@@ -535,12 +533,6 @@ float VstCore::GetDelta(VstInt32 freq)
 	return s_freqDelta[freq];
 }
 
-
-bool VstCore::IsNoteOn(int pitch)
-{
-	return (m_keyBits[pitch/32]) & (1 << (pitch & 31));
-}
-
 int VstCore::NextFreeVoice()
 {
 	// - Look for a completely free slot
@@ -579,6 +571,30 @@ int VstCore::NextFreeVoice()
 	}
 	
 	return oldestVoice;
+}
+
+bool VstCore::IsKeyDown(int pitch)
+{
+    return (m_keyBits[pitch/32]) & (1 << (pitch & 31));
+}
+
+bool VstCore::IsNoteOn(int pitch)
+{
+    return (m_noteBits[pitch/32]) & (1 << (pitch & 31));
+}
+
+void VstCore::KeyDown(int pitch)
+{
+    int keyWord = pitch/32;
+    uint32_t keyBitMask = 1 << (pitch&31);
+    m_keyBits[keyWord] |= keyBitMask;
+}
+
+void VstCore::KeyUp(int pitch)
+{
+    int keyWord = pitch/32;
+    uint32_t keyBitMask = ~(1 << (pitch&31));
+    m_keyBits[keyWord] &= keyBitMask;
 }
 
 void VstCore::NoteOn(int pitch, int velocity)
@@ -716,17 +732,18 @@ void VstCore::NoteOn(int pitch, int velocity)
         }
 	}
 	
-	// Toggle bit on for key-down map
+	// Toggle bit on for notes-sounding map
     int keyWord = pitch/32;
-    int keyBit = pitch&31;
-	m_keyBits[keyWord] |= 1<<keyBit;
+    uint32_t keyBitMask = 1 << (pitch&31);
+	m_noteBits[keyWord] |= keyBitMask;
 	m_timestampClock++;
 }
 
 void VstCore::NoteOff(int pitch)
 {
 	int keyWord = pitch/32;
-	m_keyBits[keyWord] = m_keyBits[keyWord] & ~(1<<(pitch&31));
+    uint32_t keyBitMask = ~(1 << (pitch&31));
+	m_noteBits[keyWord] &= keyBitMask;
 
     if (m_isMono)
     {
@@ -767,7 +784,8 @@ void VstCore::ReleaseAllHeldNotes()
 {
     for (int key = 0; key < 128; key++)
     {
-        if (IsNoteOn(key)) NoteOff(key);
+        if (IsNoteOn(key) && !IsKeyDown(key))
+            NoteOff(key);
     }
 }
 
@@ -777,9 +795,9 @@ int VstCore::FindLowestNote()
 	bool found = false;
 	for (i=0; i<4; i++)
 	{
-		if (m_keyBits[i] != 0)
+		if (m_noteBits[i] != 0)
 		{
-			int word = m_keyBits[i];
+			int word = m_noteBits[i];
 			for (j=0; j<32; j++)
 			{
 				if (word & 1<<j)
@@ -834,11 +852,10 @@ void VstCore::HandleMidiEvent(char* midiData)
 	{
 		case 0x80: // Note off 
 		{
+            VstInt32 key = midiData[1];
             if (!m_sustainDown)
-            {
-			    VstInt32 key = midiData[1];
 			    NoteOff(key);
-            }
+            KeyUp(key);
 			break;
 		}
 		case 0x90: // Note on
@@ -846,9 +863,18 @@ void VstCore::HandleMidiEvent(char* midiData)
 			VstInt32 key = midiData[1];
 			VstInt32 vel = midiData[2];
 			if (vel > 0)
+            {
+                // actual note-on event
                 NoteOn(key, vel);
-            else if (!m_sustainDown)
-                NoteOff(key);
+                KeyDown(key);
+            }
+            else
+            {
+                // "note-on" with vel=0 means "note-off"
+                if (!m_sustainDown)
+                    NoteOff(key);
+                KeyUp(key);
+            }
             break;
 		}
         case 0xA0:  // Aftertouch (poly)
@@ -1965,6 +1991,3 @@ void VstCore::ResetEngine()
     AllNotesOff();
     ResetPhases();
 }
-
-
-

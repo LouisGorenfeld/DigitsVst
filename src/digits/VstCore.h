@@ -234,8 +234,10 @@ public:
     
 	void NoteOn(int pitch, int velocity);
 	void NoteOff(int pitch);
+    void KeyDown(int pitch);
+    void KeyUp(int pitch);
     void ReleaseAllHeldNotes();
-    
+
     bool VoiceIsFree(int voiceNum) { return m_voices[voiceNum]->IsFree(); }
     bool VoiceIsSubVoice(int voiceNum) { return m_voices[voiceNum]->IsSubVoice(); }
 	void VoiceRender(int voiceNum, float *out, int len, Voice::voiceBuffers_t *bufs, int debugvoice, int debugthread)
@@ -301,8 +303,9 @@ private:
     
     SndBuf* m_tempBuf;
     
-	// Bitfield for which keys are on (mono mode)
-	uint32_t m_keyBits[4];
+	// Bitfields for which keys are on (mono mode)
+    uint32_t m_keyBits[4];  // which MIDI keys are down
+	uint32_t m_noteBits[4]; // which notes are sounding
 
     // State of MIDI sustain pedal
     bool m_sustainDown;
@@ -314,6 +317,7 @@ private:
 	BufferManager m_manager;
 	
 	// True if this key is held down (keybits)
+    inline bool IsKeyDown(int pitch);
 	inline bool IsNoteOn(int pitch);
 
 	// Very simple store of floating point settings
