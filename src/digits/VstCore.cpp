@@ -202,6 +202,7 @@ VstCore::VstCore(audioMasterCallback audioMaster) :
 	AudioEffectX(audioMaster, 128, kNumParams),
     m_isMono(false),
     m_alwaysGlide(false),
+    m_sustainDown(false),
 	m_timestampClock(0),
 	m_nextSpan(0),
 	m_patchData(0),
@@ -537,7 +538,7 @@ float VstCore::GetDelta(VstInt32 freq)
 
 bool VstCore::IsNoteOn(int pitch)
 {
-	return m_keyBits[pitch/32] & 1<<pitch&31;
+	return (m_keyBits[pitch/32]) & (1 << (pitch & 31));
 }
 
 int VstCore::NextFreeVoice()
@@ -610,7 +611,6 @@ void VstCore::NoteOn(int pitch, int velocity)
 	{
         if (m_isMono)
         {
-
             if (FindLowestNote() == -1)
             {
                 // This isn't obeying m_phatLite -- any system can handle this
@@ -761,7 +761,14 @@ void VstCore::NoteOff(int pitch)
         for (int i=0; i<kNumVoices; i++)
             m_voices[i]->NoteOff(pitch);
     }
-    
+}
+
+void VstCore::ReleaseAllHeldNotes()
+{
+    for (int key = 0; key < 128; key++)
+    {
+        if (IsNoteOn(key)) NoteOff(key);
+    }
 }
 
 int VstCore::FindLowestNote()
@@ -827,15 +834,18 @@ void VstCore::HandleMidiEvent(char* midiData)
 	{
 		case 0x80: // Note off 
 		{
-			VstInt32 key = midiData[1];
-			NoteOff(key);
+            if (!m_sustainDown)
+            {
+			    VstInt32 key = midiData[1];
+			    NoteOff(key);
+            }
 			break;
 		}
 		case 0x90: // Note on
 		{
 			VstInt32 key = midiData[1];
 			VstInt32 vel = midiData[2];
-			if (vel == 0)
+			if (vel == 0 && !m_sustainDown)
 				NoteOff(key);
 			else
 				NoteOn(key, vel);
@@ -868,6 +878,13 @@ void VstCore::HandleMidiEvent(char* midiData)
 				float gain = (float)midiData[2] / 127.0f;
 				setParameter(VstCore::kGain, gain);
 			}
+            else if (midiData[1] == 0x40) // sustain pedal
+            {
+                bool susDown = (midiData[2] > 0);
+                if (!susDown && m_sustainDown)
+                    ReleaseAllHeldNotes();
+                m_sustainDown = susDown;
+            }
             break;
 		}
         case 0xC0: // PrgCh
@@ -881,7 +898,6 @@ void VstCore::HandleMidiEvent(char* midiData)
             for (int i=0; i<kNumVoices; i++)
                 m_voices[i]->SetAftertouch(pressure);
             break;
-
         }
         case 0xE0:	// Pitch bend
 		{

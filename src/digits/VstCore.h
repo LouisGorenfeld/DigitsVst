@@ -234,6 +234,7 @@ public:
     
 	void NoteOn(int pitch, int velocity);
 	void NoteOff(int pitch);
+    void ReleaseAllHeldNotes();
     
     bool VoiceIsFree(int voiceNum) { return m_voices[voiceNum]->IsFree(); }
     bool VoiceIsSubVoice(int voiceNum) { return m_voices[voiceNum]->IsSubVoice(); }
@@ -302,6 +303,9 @@ private:
     
 	// Bitfield for which keys are on (mono mode)
 	uint32_t m_keyBits[4];
+
+    // State of MIDI sustain pedal
+    bool m_sustainDown;
 	
 	// Frames left to write within the control rate-sized buffer
 	// left to write out to the host's buffer, preserved
