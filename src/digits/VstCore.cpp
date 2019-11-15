@@ -845,10 +845,10 @@ void VstCore::HandleMidiEvent(char* midiData)
 		{
 			VstInt32 key = midiData[1];
 			VstInt32 vel = midiData[2];
-			if (vel == 0 && !m_sustainDown)
-				NoteOff(key);
-			else
-				NoteOn(key, vel);
+			if (vel > 0)
+                NoteOn(key, vel);
+            else if (!m_sustainDown)
+                NoteOff(key);
             break;
 		}
         case 0xA0:  // Aftertouch (poly)
