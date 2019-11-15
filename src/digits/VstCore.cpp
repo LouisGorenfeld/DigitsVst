@@ -6,7 +6,7 @@
 #include <cassert>
 #include "VstCore.h"
 #include "Voice.h"
-#include "LGDebug.h"
+//#include "LGDebug.h"
 #include "Tables.h"
 #include "Patches.h"
 

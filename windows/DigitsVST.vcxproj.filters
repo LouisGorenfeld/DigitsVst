@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\sdks\vstgui\plugin-bindings\aeffguieditor.cpp" />
+    <ClCompile Include="..\sdks\vstgui\vstgui_win32.cpp" />
+    <ClCompile Include="..\sdks\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp" />
+    <ClCompile Include="..\sdks\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp" />
+    <ClCompile Include="..\sdks\vstsdk2.4\public.sdk\source\vst2.x\vstplugmain.cpp" />
+    <ClCompile Include="..\src\components\BufferManager.cpp" />
+    <ClCompile Include="..\src\components\Chorus.cpp" />
+    <ClCompile Include="..\src\components\Contour.cpp" />
+    <ClCompile Include="..\src\components\PatchBankListWin.cpp" />
+    <ClCompile Include="..\src\components\SndBuf.cpp" />
+    <ClCompile Include="..\src\components\Tables.cpp" />
+    <ClCompile Include="..\src\components\Voice.cpp" />
+    <ClCompile Include="..\src\digits\EditorWindow.cpp" />
+    <ClCompile Include="..\src\digits\Patches.cpp" />
+    <ClCompile Include="..\src\digits\PhaseDist.cpp" />
+    <ClCompile Include="..\src\digits\ResoGen.cpp" />
+    <ClCompile Include="..\src\digits\VstCore.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\components\BufferManager.h" />
+    <ClInclude Include="..\src\components\Chorus.h" />
+    <ClInclude Include="..\src\components\Contour.h" />
+    <ClInclude Include="..\src\components\FilterBank.h" />
+    <ClInclude Include="..\src\components\LFO.h" />
+    <ClInclude Include="..\src\components\PatchBankList.h" />
+    <ClInclude Include="..\src\components\PatchBankListWin.h" />
+    <ClInclude Include="..\src\components\SndBuf.h" />
+    <ClInclude Include="..\src\components\Tables.h" />
+    <ClInclude Include="..\src\components\Voice.h" />
+    <ClInclude Include="..\src\digits\EditorWindow.h" />
+    <ClInclude Include="..\src\digits\Patches.h" />
+    <ClInclude Include="..\src\digits\PhaseDist.h" />
+    <ClInclude Include="..\src\digits\ResoGen.h" />
+    <ClInclude Include="..\src\digits\VstCore.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Digits.rc" />
+  </ItemGroup>
+</Project>
