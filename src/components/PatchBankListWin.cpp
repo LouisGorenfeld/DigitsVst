@@ -7,7 +7,7 @@
 PatchBankList::PatchBankList()
 {
 	TCHAR path[MAX_PATH];
-	if (SHGetFolderPath(0, CSIDL_MYDOCUMENTS, 0, NULL, path) == S_OK)
+	if (SHGetFolderPath(0, CSIDL_COMMON_DOCUMENTS, 0, NULL, path) == S_OK)
 	{
 		m_bankPrefix = (char*)path;
 		m_bankPrefix += "/Extent of the Jam/Digits/Patches";
