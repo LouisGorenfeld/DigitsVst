@@ -2,17 +2,17 @@
 
 http://www.extentofthejam.com/
 
-## license
+## License
 
 Please read License.txt! :) Digits is licensed under the GPL. 
 
-## building
+## Building
 
-### prerequisites
+### Prerequisites
 
 You'll need the Steinberg VST SDK downloaded into the sdks/vstsdk2.4 directory.
 
-### linux
+### Linux
 
     cd linux
     make -f Digits.make
