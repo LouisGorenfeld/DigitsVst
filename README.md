@@ -1,6 +1,6 @@
 # Digits VST
 
-http://www.extentofthejam.com/
+https://www.extentofthejam.com/
 
 ## license
 
